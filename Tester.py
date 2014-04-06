@@ -3,7 +3,7 @@
 #
 # Use this script as an example for ControlTower
 
-import ControlTower
+from ControlTower import ControlTower
 
 supervisor = ControlTower()
 

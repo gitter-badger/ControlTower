@@ -6,7 +6,7 @@ from sys import exit
 import subprocess
 import time
 # Local Imports
-from screen_supervisor import ScreenSupervisor
+from ScreenSupervisor import ScreenSupervisor
 
 class ControlTower:
 	def __init__(self, server_path="../coordinator_recv/", server_name="coordinator_recv.py", screen_name="AwesomeScreen"):
