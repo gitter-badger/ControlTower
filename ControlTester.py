@@ -5,8 +5,8 @@
 
 from ControlTower import ControlTower
 
-server_path = '../../'
-server_name = 'api-server.py'
+server_path = './'
+server_name = 'Test.py'
 screen_name = 'TesterScreen'
 
 supervisor = ControlTower(server_path, server_name, screen_name)
