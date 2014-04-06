@@ -5,16 +5,15 @@ import os
 from sys import exit
 import subprocess
 import time
-
 # Local Imports
 from screen_supervisor import ScreenSupervisor
 
 class ControlTower:
-	def __init__(self, server_path="../coordinator_recv/", server_name="coordinator_recv.py"):
+	def __init__(self, server_path="../coordinator_recv/", server_name="coordinator_recv.py", screen_name="AwesomeScreen"):
 		self.SERVER_FILE_PATH = server_path
 		self.SERVER_FILE_NAME = server_name
 		self.SERVER_COMMAND = "python " + self.SERVER_FILE_PATH + self.SERVER_FILE_NAME + "\n"
-		self.SCREEN_NAME = "AwesomeScreen"
+		self.SCREEN_NAME = screen_name
 		self.USER_NAME = str(os.environ['USER'])
 
 		self.print_start_message()
