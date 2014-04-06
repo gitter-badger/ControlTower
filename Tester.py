@@ -5,7 +5,11 @@
 
 from ControlTower import ControlTower
 
-supervisor = ControlTower()
+server_path = '../../'
+server_name = 'api-server.py'
+screen_name = 'TesterScreen'
+
+supervisor = ControlTower(server_path, server_name, screen_name)
 
 while True:
 	supervisor.get_menu_option()

@@ -5,7 +5,9 @@ class ScreenSupervisor:
 		on = True
 
 	def start_session(self, session_name):
-		command = ['screen', '-c', 'screen_config', '-L', '-d', '-m', '-S', session_name]
+		# command = ['screen', '-c', 'screen_config', '-L', '-d', '-m', '-S', session_name]
+		command = ['screen', '-d', '-m', '-S', session_name]
+		print "Running command: " + str(command)
 		subprocess.check_output(command)
 	
 	
@@ -31,6 +33,7 @@ class ScreenSupervisor:
 			print "The screen doesn't exist. We can't kill it"
 
 	def send_command(self, screen_name, command):
+		print "Sending command to screen"
 		call_cmd = ['screen', '-S', screen_name, '-X', 'stuff', command]
 		subprocess.call(call_cmd)
 

@@ -28,12 +28,13 @@ class ControlTower:
 
 	def start_screen(self):
 		if not self.screen_super.exists_session(self.SCREEN_NAME):
+			print "DEBUG: Starting screen"
 			self.screen_super.start_session(self.SCREEN_NAME)
 
 	def start_process(self):
 		if not (self.exists_process()):
-			command = ['screen', '-S', self.SCREEN_NAME, '-X', 'stuff', self.SERVER_COMMAND] 
-			subprocess.call(command)
+			print "DEBUG: Starting process with command: " + str(self.SERVER_COMMAND)
+			self.screen_super.send_command(self.SCREEN_NAME, self.SERVER_COMMAND)
 
 	def kill_server(self):
 		self.kill_process()
