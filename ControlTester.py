@@ -6,7 +6,7 @@
 from ControlTower import ControlTower
 
 server_path = './'
-server_name = 'Test.py'
+server_name = 'TestServer.py'
 screen_name = 'TesterScreen'
 
 supervisor = ControlTower(server_path, server_name, screen_name)

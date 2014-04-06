@@ -9,7 +9,7 @@ import time
 from ScreenSupervisor import ScreenSupervisor
 
 class ControlTower:
-	def __init__(self, server_path="./", server_name="Test.py", screen_name="AwesomeScreen"):
+	def __init__(self, server_path="./", server_name="TestServer.py", screen_name="AwesomeScreen"):
 		self.SERVER_FILE_PATH = server_path
 		self.SERVER_FILE_NAME = server_name
 		self.SERVER_COMMAND = "python " + self.SERVER_FILE_PATH + self.SERVER_FILE_NAME + "\n"
